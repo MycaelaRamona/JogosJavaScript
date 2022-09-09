@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da Memória</title>
+
+</head>
+<body>
+    <main>
+        <div id="menu-memoria">
+            <form id="login_form">
+                <img src="../img/brain.png" id="img-jogo-memoria" alt="Logo jogo da memoria">
+                <h1>JOGO DA MEMÓRIA</h1>
+                <input type="text" placeholder="Inserir nome do Jogador" id="nome_jogador" onkeyup="exclui_caracteres_especiais(this)">
+                <h2>ESCOLHA A GRELHA:</h2>
+                <select id="selecao_nivel">
+                    <option value="12"selected>Fácil</option>
+                    <option value="16">Médio</option>
+                    <option value="20">Dificil</option>
+                </select>
+                <input type="button" id="botao_play"  value="Jogar" onclick="iniciar_jogo_memoria()">
+            </form>
+        </div>
+
+        <div id="jogo_memoria" style="display: none;"> 
+            <h1>Jogo Da Memoria</h1>
+            <div id="contador">00:00</div>
+            <div id="grelha_jogo"></div>
+            <div id="popup-final" style="display: none;"></div>
+        </div>
+    </main>
+
+</body>
+
+</html>

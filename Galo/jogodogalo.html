@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Galo/jogodogalo.css"/>
+    <title>Jogo do Galo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+<main>
+    <div id="div_login">
+        <form id="login_form">
+            <img src="../img/jogodogalo.png" alt="jogo do galo logo">
+            <h1>JOGO DO GALO</h1>
+            <input type="text" placeholder="Jogador 1" id="nome_jogador1">
+            <input type="text" placeholder="Jogador 2" id="nome_jogador2">
+
+            <input type="button" id="botao_play"  value="Jogar" onclick="iniciarJogo()">
+        </form>
+    </div>
+
+    <div id="jogo_dogalo" style="display: none;">
+
+        <h1>JOGO DO GALO</h1>
+        <h3 id="rodada"> </h3>
+        <br>
+        <time id="timer">00:00</time>
+        <div id="nome_inputs_jogadores">
+            <p id="jogad1">JOGADOR 1</p>
+
+
+        <div class= "caixa">
+            <div class="grade">
+                <div class="celula_galo" id="0"></div>
+                <div class="celula_galo" id="1"></div>
+                <div class="celula_galo" id="2"></div>
+                <div class="celula_galo" id="3"></div>
+                <div class="celula_galo" id="4"></div>
+                <div class="celula_galo" id="5"></div>
+                <div class="celula_galo" id="6"></div>
+                <div class="celula_galo" id="7"></div>
+                <div class="celula_galo" id="8"></div>
+            </div>
+        </div>
+
+            <p id="jogad2">JOGADOR 2</p>
+
+    </div>
+    </main>
+
+
+<!-- <script src="jogodogalo.js"></script> -->
+
+</body>
+</html>

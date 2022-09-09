@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="Memoria/memoria.css" />
+    <link rel="stylesheet" href="QuatroL/quatroL.css">
+    <link rel="stylesheet" href="Galo/jogodogalo.css">
+    
+    <script rel="script" src="Memoria/memoria.js"></script>
+    <script rel="script" src="QuatroL/quatroL.js"></script>
+    <script rel="script" src="Galo/jogodogalo.js"></script>
+
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div id="escolha_jogo">
+            <div id="img-banner">
+                <img id="img-pagina-principal" src="img/Video-Game.png" alt="Imagem do banner Video Game">
+            </div>
+            <form id="form_jogo" class="fora-do-jogo">
+                <h2>ESCOLHA O JOGO:</h2>
+                <select id="menu-jogos">
+                    <option value="Galo/jogodogalo">JOGO DO GALO</option>
+                    <option value="Memoria/memoria" selected>JOGO DA MEMÓRIA</option>
+                    <option value="QuatroL/quatroL">QUATRO EM LINHA</option>
+                    <option value="../historico">HISTÓRICO DE JOGOS</option>
+                </select>
+                <input type="button" id="botao_jogo" value="Ok" onclick="selecionar_jogo()">
+            </form>
+        </div>
+    </nav>
+    <main id="index">
+        
+        <div id="pagina_HTML"></div>
+       
+    </main>
+    
+</body>
+
+</html>
