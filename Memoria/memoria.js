@@ -136,7 +136,7 @@ function gerar_grelha_jogo() {
     for (let i = 0; i < num_cartas; i++) {
         $('#grelha_jogo').append(`
         <div class="carta_img" id="${i}">
-            <div class="face frente" style = "background-image: url('./img/${baralho[i]}.png')" ></div>
+            <div class="face frente" style = "background-image: url('../img/${baralho[i]}.png')" ></div>
             <div class="face verso"></div>
         </div>
     `)
