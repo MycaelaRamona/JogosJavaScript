@@ -3,7 +3,7 @@ const botao_play = $('#botao_play');
 const formulario_login = $('#login_form');
 const grelha_jogo = $('#grelha_jogo');
 
-let contador_segundos_memoria;  
+let contador_segundos_memoria;
 let primeira_carta = '';
 let segunda_carta = '';
 let primeira_carta_id = '';
@@ -36,21 +36,21 @@ function iniciar_jogo_memoria() {
 
     if (!validar_nome_memoria($("#nome_jogador").val()))
         return;     //o return serve para não deixar o jogador avançar sem inserior o nome.
-    $("#jogo_memoria").css("display", ""); 
+    $("#jogo_memoria").css("display", "");
     $("#menu-memoria").css("display", "none");
 
 
     gerar_grelha_jogo();
-    
-    
+
+
     apontador_contador = window.setInterval(() => {
         contador_segundos_memoria++;
 
-        let minutos = Math.floor(contador_segundos_memoria / 60); 
-        let segundos = contador_segundos_memoria - minutos * 60; 
+        let minutos = Math.floor(contador_segundos_memoria / 60);
+        let segundos = contador_segundos_memoria - minutos * 60;
 
         let contador =
-            ('00' + minutos).slice(-2) + 
+            ('00' + minutos).slice(-2) +
             ':' +
             ('00' + segundos).slice(-2)
             ;
@@ -74,7 +74,7 @@ function iniciar_jogo_memoria() {
 };
 
 /** Funçao para aplicar Expressão regular - REGEX com os caracteres validos
- * 
+ *
  */
  function exclui_caracteres_especiais(entrada) {
     let validos_char = /[^a-zç' '0-9]/gi; //^ Tudo EXCETO o que segue // gi Global I inclui Lower e Uppercases
@@ -87,15 +87,15 @@ function iniciar_jogo_memoria() {
 */
 
 function gerar_baralho() {
-   
+
     for (let i = 0; i < num_cartas; i += 2) {
 
         baralho.push(i / 2)  // i -> 0, 2, 4, 6, 8, 10
         baralho.push(i / 2)  // i / 2 -> 0, 1, 2, 3, 4, 5
-        
-        
+
+
     }
-    
+
 
     baralharCartas();
 };
@@ -117,7 +117,7 @@ function baralharCartas() {
 
         // na seguinte linha vamos TROCAR 2 valores em duas posições
         [baralho[indice_atual], baralho[indice_aleatorio]] = [baralho[indice_aleatorio], baralho[indice_atual]];
-       
+
     }
 }
 /**
@@ -167,7 +167,7 @@ function verificar_carta() {
             }, 300);
 
         }
-        setTimeout(ocultar_cartas_matched, 300); 
+        setTimeout(ocultar_cartas_matched, 300);
     }
     else {
         setTimeout(mostrar_verso, 600);
@@ -177,7 +177,7 @@ function verificar_carta() {
 }
 
 /**
- * Esta função é chamada sempre que clicamos em uma carta que esta 
+ * Esta função é chamada sempre que clicamos em uma carta que esta
  * mostrando o seu verso.
  */
 
@@ -208,7 +208,7 @@ function mostra_carta({ target }) {
 
     if (target.parentNode.className.includes('mostra_carta')) {
         // se clicar na mesma carta não faz nada
-        
+
         //console.log("Clique em outra carta!")
         return;
     }
@@ -243,7 +243,7 @@ function mostra_carta({ target }) {
  */
 
 function ocultar_cartas_matched() {
-   
+
     primeira_carta.classList.add('esconde_carta')
     segunda_carta.classList.add('esconde_carta')
 
@@ -288,18 +288,18 @@ function gerar_popup() {
             <button id="voltar-menu">MENU</button>
         </div>
     </div>
-    
+
     `)
 
     jogo_terminou_memoria();
     $('#jogar-novamente').on("click", () =>{
         $(".div-modal").css("display", "none");
         $('#grelha_jogo').css('display', '');
-        
+
         iniciar_jogo_memoria();
     });
-   
-    
+
+
     $('#voltar-menu').on("click", () => {
         $("#img-banner").css("display", "");
         $('#pagina_HTML').html("");

@@ -26,7 +26,7 @@ function selecionar_jogo(){
     $('#pagina_HTML').load(`${pagina_HTML + ".html"}`); 
 
     
-    console.log(pagina_HTML);
+    //console.log(pagina_HTML);
   }
 
 /**
