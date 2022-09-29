@@ -154,7 +154,7 @@ body {
 }
 
 .verso {
-    background-image: url("./img/memoria_verso.png");
+    background-image: url("../img/memoria_verso.png");
     backface-visibility: hidden;
     border-radius: 8px;
     border: 2px solid cadetblue;
